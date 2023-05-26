@@ -1,0 +1,17 @@
+<app-nav-bar [isDarkTheme]="true" [brandText]="'ADMINISTRACION'"></app-nav-bar>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-4 row-cols-2 g-4 mt-2">
+
+      <app-single-link-card (click)="toggleTag()" *ngFor="let item of panelData" 
+      [title]="item.title" 
+      [icon]="item.icon"
+      [link]="item.link"
+      ></app-single-link-card>
+
+    </div>
+
+</div>
+
+<app-alumnos *ngIf="showMe"></app-alumnos>
+
